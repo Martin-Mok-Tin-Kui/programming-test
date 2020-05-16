@@ -6,13 +6,22 @@ the neighbors of each vertex may be listed efficiently, in time proportional to 
 
 Adjacency list is usually implemented by linked list, but since javascript doesn’t have built in support for it, 
 I choose to use ES6 set and map, so that the operations can be optimized by the javascript engine in the browser.  
-'''js
+
+As it is easier to manipulate integer, I will map the alphabet graph labeling scheme to integer labeling.
+I used an array to map the index to the alphabet. So once I find the path I can display it back to letter.
+e.g. 1->5->0 can be displayed to letter path by letter[1]->letter[5]->letter[0]
+```js
+const letter=['A','B','C','D','E','F','G','H'];
 const adjacencyList = new Map();
-adjacencyList.set(1, new Set([2,3]));
-adjacencyList.set(2, new Set([3,4]));
-adjacencyList.set(3, new Set());
-adjacencyList.set(4, new Set([3]));
-'''
+adjacencyList.set(0, new Set([1,3,7]));
+adjacencyList.set(1, new Set([0,2,3]));
+adjacencyList.set(2, new Set([1,3,5]));
+adjacencyList.set(3, new Set([0,2,4]));
+adjacencyList.set(4, new Set([3,5,7]));
+adjacencyList.set(5, new Set([2,4,6]));
+adjacencyList.set(6, new Set([5,7]));
+adjacencyList.set(7, new Set([0,6]));
+```
 
 1.1 To find all the path from source node s to destination node d,
 I use Depth-first search (DFS), so that I can print the result immediately once I found the path.
