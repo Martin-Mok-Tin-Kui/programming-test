@@ -23,8 +23,19 @@ adjacencyList.set(6, new Set([5,7]));
 adjacencyList.set(7, new Set([0,6]));
 ```
 
-1.1 To find all the path from source node s to destination node d,
-I use Depth-first search (DFS), so that I can print the result immediately once I found the path.
-
+1.1 To find all the paths from source node s to destination node d,
+I use recursive Depth-first search (DFS) without the need to use stack, and print the result immediately once I found the path.
+```js
+const visited = new Set();
+const dfs = node => {
+  visit(node);
+  visited.add(node);
+  for (let neighbour of adjacencyList.get(node)) {
+    if (!visited.has(neighbour)) {
+     dfs(neighbour);
+    }
+  }
+};
+```
 Reference:  
 1.[Data Structures in JavaScript: Graphs](https://medium.com/better-programming/basic-interview-data-structures-in-javascript-graphs-3f9118aeb078)  
