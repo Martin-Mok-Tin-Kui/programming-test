@@ -58,7 +58,7 @@ for (const [k, v] of adjacencyList) {
 console.log(JSON.stringify(allPath));
 allPath.forEach(e=>console.log(JSON.stringify(e)));
 ```  
-![The graph for test2](//assets/web/graph.png)  
+![The graph for test2](./assets/web/graph.png)  
 ```js
 //*****Testing2*****
 allPath.length=0;
