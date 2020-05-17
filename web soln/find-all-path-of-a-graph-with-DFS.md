@@ -57,7 +57,7 @@ for (const [k, v] of adjacencyList) {
 console.log(JSON.stringify(allPath));
 allPath.forEach(e=>console.log(JSON.stringify(e)));
 ```
-Reference:
+References:
 1. [Data Structures in JavaScript: Graphs](https://medium.com/better-programming/basic-interview-data-structures-in-javascript-graphs-3f9118aeb078)  
 2. [Print all paths from a given source to a destination
 ](https://www.geeksforgeeks.org/find-paths-given-source-destination/)  
