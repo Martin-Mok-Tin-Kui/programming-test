@@ -1,4 +1,4 @@
-Question 1:  
+Soln for Question 1:  
 For question 1, I choose to use an adjacency list to represent the undirected graph.  
 Below are some major benefits for using this data structure representation in path finding algorithm:  
 getting all nodes adjacent to node i takes O(1) steps.  
@@ -25,6 +25,7 @@ adjacencyList.set(7, new Set([0,6]));
 
 1.1 To find all the paths from source node s to destination node d,
 I use recursive Depth-first search (DFS) without the need to use stack, and print the result immediately once I found the path.
+
 ```js
 const visited = new Set();
 const dfs = node => {
