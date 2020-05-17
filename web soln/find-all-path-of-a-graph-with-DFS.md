@@ -6,7 +6,7 @@ adjacencyList.set(1, new Set([2,3]));
 adjacencyList.set(2, new Set([3,4]));
 adjacencyList.set(3, new Set());
 adjacencyList.set(4, new Set([3]));
-adjacencyList.set(5,new Set());
+adjacencyList.set(5,new Set());//an isolated node also added for testing
 
 let allPath = [];
 
