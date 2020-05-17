@@ -1,5 +1,5 @@
 A program to find all the paths for a given graph.
-![The graph for test](assets/mobile/list.png)
+![The graph for test]()
 ```js
 const adjacencyList = new Map();
 adjacencyList.set(1, new Set([2,3]));
