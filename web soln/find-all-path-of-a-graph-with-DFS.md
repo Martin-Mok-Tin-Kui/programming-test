@@ -43,17 +43,13 @@ adjacencyList.set(3, new Set());
 adjacencyList.set(4, new Set([3]));
 adjacencyList.set(5,new Set());//an isolated node also added for testing
 
-
-
 adjacencyList.forEach((v,k)=>{dfs(k);localPath.length=0;});
-
 /*
 for (const [k, v] of adjacencyList) {
   dfs(k);
   localPath.length=0;
 }
 */
-
 //allPath.length=0;
 //dfs(3);
 //localPath.length=0;
@@ -62,8 +58,9 @@ for (const [k, v] of adjacencyList) {
 console.log(JSON.stringify(allPath));
 allPath.forEach(e=>console.log(JSON.stringify(e)));
 ```  
-![The graph for test](mediumGraph.png)  
-```js//*****Testing2*****
+![The graph for test2](//assets/web/graph.png)  
+```js
+//*****Testing2*****
 allPath.length=0;
 visited.clear();
 localPath.length=0;
@@ -84,7 +81,8 @@ newAllPath=allPath.forEach(
   e=>{
     let new_e=e.map(e=>letter[e]);
     console.log(JSON.stringify(new_e));
-  });```
+  });
+```
 References:
 1. [Data Structures in JavaScript: Graphs](https://medium.com/better-programming/basic-interview-data-structures-in-javascript-graphs-3f9118aeb078)  
 2. [Print all paths from a given source to a destination
